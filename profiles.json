@@ -262,6 +262,23 @@
       "selector": ".titre a",
       "threshold": 0.8,
       "url_pattern": "okkazeo\\.com"
+    },
+    {
+      "card_selector": "li.product",
+      "domain": "lepion.com",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Le Pion",
+      "price_selector": ".woocommerce-Price-amount",
+      "sale_price_selector": "del .woocommerce-Price-amount",
+      "selector": ".woocommerce-loop-product__title",
+      "threshold": 0.8,
+      "url_pattern": "lepion\\.com"
     }
   ],
   "version": "1.1.0"
