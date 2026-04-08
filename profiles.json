@@ -1,399 +1,95 @@
 {
   "$schema": "./schema.json",
+  "version": "1.1.0",
   "profiles": [
     {
-      "card_selector": ".s_title_block",
-      "domain": "philibertnet.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
       "name": "Philibert Flash Sales",
-      "price_selector": ".price",
-      "sale_price_selector": ".old-price",
-      "selector": "a",
-      "threshold": 0.8,
-      "url_pattern": "philibertnet\\.com/.*/flash-sales"
-    },
-    {
-      "card_selector": ".s_title_block",
       "domain": "philibertnet.com",
+      "url_pattern": "philibertnet\\.com/.*/flash-sales",
+      "selector": ".s_title_block a",
+      "threshold": 0.8,
       "filters": {
-        "deduplicate": true,
         "exclude": [],
         "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
+        "trim": true,
+        "deduplicate": true
+      }
+    },
+    {
       "name": "Philibert Promotions",
-      "price_selector": ".price",
-      "sale_price_selector": ".old-price",
-      "selector": "a",
-      "threshold": 0.8,
-      "url_pattern": "philibertnet\\.com/.*/promotions"
-    },
-    {
-      "card_selector": ".s_title_block",
       "domain": "philibertnet.com",
+      "url_pattern": "philibertnet\\.com/.*/promotions",
+      "selector": ".s_title_block a",
+      "threshold": 0.8,
       "filters": {
-        "deduplicate": true,
         "exclude": [],
         "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
+        "trim": true,
+        "deduplicate": true
+      }
+    },
+    {
       "name": "Philibert Homepage",
-      "price_selector": ".price",
-      "sale_price_selector": ".old-price",
-      "selector": "a",
-      "threshold": 0.8,
-      "url_pattern": "philibertnet\\.com/(?:fr|en|de|es|it)/?$"
-    },
-    {
-      "card_selector": ".s_title_block",
       "domain": "philibertnet.com",
+      "url_pattern": "philibertnet\\.com/(?:fr|en|de|es|it)/?$",
+      "selector": ".s_title_block a",
+      "threshold": 0.8,
       "filters": {
-        "deduplicate": true,
         "exclude": [],
         "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Philibert Search / Category",
-      "price_selector": ".price",
-      "sale_price_selector": ".old-price",
-      "selector": "a",
-      "threshold": 0.8,
-      "url_pattern": "philibertnet\\.com/"
+        "trim": true,
+        "deduplicate": true
+      }
     },
     {
-      "card_selector": "div[data-component-type=\"s-search-result\"]",
-      "domain": "amazon.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [
-          "^Sponsored",
-          "^Sponsoris\u00e9",
-          "^Advertisement",
-          "^Publicit\u00e9"
-        ],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img.s-image",
       "name": "Amazon Search Results",
-      "price_selector": ".a-price .a-offscreen",
-      "sale_price_selector": ".a-price[data-a-strike] .a-offscreen",
-      "selector": "h2 span",
-      "threshold": 0.8,
-      "url_pattern": "amazon\\.(com|fr|de|co\\.uk|es|it)/s\\?"
-    },
-    {
-      "card_selector": "div[data-component-type=\"s-search-result\"]",
-      "domain": "amazon.fr",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [
-          "^Sponsoris\u00e9",
-          "^Publicit\u00e9"
-        ],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img.s-image",
-      "name": "Amazon France Search",
-      "price_selector": ".a-price .a-offscreen",
-      "sale_price_selector": ".a-price[data-a-strike] .a-offscreen",
-      "selector": "h2 span",
-      "threshold": 0.8,
-      "url_pattern": "amazon\\.fr/s\\?"
-    },
-    {
-      "card_selector": "div[data-component-type=\"s-search-result\"]",
-      "domain": "amazon.de",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [
-          "^Gesponsert",
-          "^Anzeige"
-        ],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img.s-image",
-      "name": "Amazon Germany Search",
-      "price_selector": ".a-price .a-offscreen",
-      "sale_price_selector": ".a-price[data-a-strike] .a-offscreen",
-      "selector": "h2 span",
-      "threshold": 0.8,
-      "url_pattern": "amazon\\.de/s\\?"
-    },
-    {
-      "card_selector": ".p13n-sc-uncoverable-faceout, .a-section",
       "domain": "amazon.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [
-          "^Sponsored",
-          "^Sponsoris\u00e9"
-        ],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Amazon Best Sellers / Category",
+      "url_pattern": "amazon\\.(com|fr|de|co\\.uk|es|it)/s\\?",
+      "card_selector": "div[data-component-type=\"s-search-result\"]",
+      "selector": "h2 span",
+      "image_selector": "img.s-image",
       "price_selector": ".a-price .a-offscreen",
-      "selector": "h2 span, .p13n-sc-truncate-desktop-type2",
+      "sale_price_selector": ".a-price[data-a-strike] .a-offscreen",
       "threshold": 0.8,
-      "url_pattern": "amazon\\.(com|fr|de|co\\.uk|es|it)/(gp/|Best-Sellers|b[/\\?])"
+      "filters": {
+        "exclude": ["^Sponsored", "^Sponsorisé", "^Advertisement", "^Publicité"],
+        "include": null,
+        "trim": true,
+        "deduplicate": true
+      }
     },
     {
-      "card_selector": "a[href^=\"/r/\"]",
-      "domain": "knapix.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
+      "name": "Amazon Best Sellers / Category",
+      "domain": "amazon.com",
+      "url_pattern": "amazon\\.(com|fr|de|co\\.uk|es|it)/(gp/|Best-Sellers|b[/\\?])",
+      "card_selector": ".p13n-sc-uncoverable-faceout, .a-section",
+      "selector": "h2 span, .p13n-sc-truncate-desktop-type2",
       "image_selector": "img",
+      "price_selector": ".a-price .a-offscreen",
+      "threshold": 0.8,
+      "filters": {
+        "exclude": ["^Sponsored", "^Sponsorisé"],
+        "include": null,
+        "trim": true,
+        "deduplicate": true
+      }
+    },
+    {
       "name": "Knapix",
+      "domain": "knapix.com",
+      "url_pattern": "knapix\\.com/",
+      "card_selector": "a[href^=\"/r/\"]",
+      "selector": "h3",
+      "image_selector": "img",
       "price_selector": ".prix-jeu",
       "sale_price_selector": ".pourcentage",
-      "selector": "h3",
       "threshold": 0.8,
-      "url_pattern": "knapix\\.com"
-    },
-    {
-      "card_selector": ".one-card",
-      "domain": "cultura.com",
       "filters": {
-        "deduplicate": true,
         "exclude": [],
         "include": null,
-        "trim": true
-      },
-      "image_selector": ".one-product_img img",
-      "name": "Cultura",
-      "price_selector": ".price",
-      "selector": ".universe-title",
-      "threshold": 0.8,
-      "url_pattern": "cultura\\.com"
-    },
-    {
-      "card_selector": ".js-ProductBuy",
-      "domain": "fnac.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Fnac",
-      "price_selector": ".thumbnail-price",
-      "selector": ".thumbnail-title",
-      "threshold": 0.8,
-      "url_pattern": "fnac\\.com"
-    },
-    {
-      "card_selector": ".product_box",
-      "domain": "espritjeu.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Esprit Jeu",
-      "price_selector": ".bp_prix_add_to_cart",
-      "selector": ".bp_designation",
-      "threshold": 0.8,
-      "url_pattern": "espritjeu\\.com"
-    },
-    {
-      "card_selector": ".product-miniature",
-      "domain": "ludum.fr",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Ludum",
-      "price_selector": ".price",
-      "selector": "h2",
-      "threshold": 0.8,
-      "url_pattern": "ludum\\.fr"
-    },
-    {
-      "card_selector": ".nq-c-ProductListItem",
-      "domain": "le-passe-temps.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Le Passe-Temps",
-      "price_selector": ".nq-c-ProductListItem-actions",
-      "selector": ".nq-c-ProductListItem-main-title",
-      "threshold": 0.8,
-      "url_pattern": "le-passe-temps\\.com"
-    },
-    {
-      "card_selector": "article.jeu",
-      "domain": "okkazeo.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Okkazeo",
-      "price_selector": ".product-card-price",
-      "selector": ".titre a",
-      "threshold": 0.8,
-      "url_pattern": "okkazeo\\.com"
-    },
-    {
-      "card_selector": "li.product",
-      "domain": "lepion.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Le Pion",
-      "price_selector": ".woocommerce-Price-amount",
-      "sale_price_selector": "del .woocommerce-Price-amount",
-      "selector": ".woocommerce-loop-product__title",
-      "threshold": 0.8,
-      "url_pattern": "lepion\\.com"
-    },
-    {
-      "card_selector": ".product-card",
-      "domain": "gamersdream.shop",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img.product-card__image",
-      "name": "Gamers Dream",
-      "price_selector": ".dualPrice",
-      "sale_price_selector": ".product-card__regular-price",
-      "selector": ".product-card__name",
-      "threshold": 0.8,
-      "url_pattern": "gamersdream\\.shop"
-    },
-    {
-      "card_selector": ".card",
-      "domain": "ludisphere.fr",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Ludisphere",
-      "price_selector": ".price-item--regular",
-      "selector": ".card__heading a",
-      "threshold": 0.8,
-      "url_pattern": "ludisphere\\.fr"
-    },
-    {
-      "card_selector": ".product-miniature",
-      "domain": "ludifolie.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Ludifolie",
-      "price_selector": ".price",
-      "selector": ".product-title",
-      "threshold": 0.8,
-      "url_pattern": "ludifolie\\.com"
-    },
-    {
-      "card_selector": ".product-search-row",
-      "domain": "coolstuffinc.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "CoolStuffInc",
-      "price_selector": ".mid-title-font",
-      "selector": "a.productLink span",
-      "threshold": 0.8,
-      "url_pattern": "coolstuffinc\\.com"
-    },
-    {
-      "card_selector": ".product-search-row",
-      "domain": "miniaturemarket.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Miniature Market",
-      "price_selector": ".price",
-      "selector": "a.productLink",
-      "threshold": 0.8,
-      "url_pattern": "miniaturemarket\\.com"
-    },
-    {
-      "card_selector": ".card",
-      "domain": "boardgamebliss.com",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "BoardGameBliss",
-      "price_selector": ".price__current",
-      "selector": ".card__title a",
-      "threshold": 0.8,
-      "url_pattern": "boardgamebliss\\.com"
-    },
-    {
-      "card_selector": ".product-card",
-      "domain": "board-game.co.uk",
-      "filters": {
-        "deduplicate": true,
-        "exclude": [],
-        "include": null,
-        "trim": true
-      },
-      "image_selector": "img",
-      "name": "Zatu Games",
-      "price_selector": ".f-price-item--sale",
-      "sale_price_selector": ".f-price-item--regular",
-      "selector": ".product-card__title a",
-      "threshold": 0.8,
-      "url_pattern": "board-game\\.co\\.uk"
+        "trim": true,
+        "deduplicate": true
+      }
     }
-  ],
-  "version": "1.1.0"
+  ]
 }
