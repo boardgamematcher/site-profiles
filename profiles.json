@@ -93,7 +93,8 @@
       "card_selector": "a[href^=\"/r/\"]",
       "selector": "h3",
       "image_selector": "img",
-      "price_selector": "p:first-of-type",
+      "price_selector": ".prix-jeu",
+      "sale_price_selector": ".pourcentage",
       "threshold": 0.8,
       "filters": {
         "exclude": [],
