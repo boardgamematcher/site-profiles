@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BGM Site Profiles",
+  "description": "Community-maintained board game site extraction profiles for BGM Toolbox and BoardGameMatcher.com",
+  "type": "object",
+  "required": ["version", "profiles"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Schema version (semver)"
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/profile"
+      }
+    }
+  },
+  "$defs": {
+    "profile": {
+      "type": "object",
+      "required": ["name", "domain", "url_pattern", "selector"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable name for this profile (e.g., 'Amazon Search Results')"
+        },
+        "domain": {
+          "type": "string",
+          "description": "Primary domain without www (e.g., 'amazon.com'). Used by the browser extension for quick matching."
+        },
+        "url_pattern": {
+          "type": "string",
+          "description": "Regex pattern matched against the full URL. Used by the website for precise matching. First match wins — put specific patterns before generic ones."
+        },
+        "selector": {
+          "type": "string",
+          "description": "CSS selector targeting game/product name elements on the page."
+        },
+        "threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.8,
+          "description": "Similarity threshold for matching extracted names to the BGM database (0-1). Lower values are more permissive."
+        },
+        "filters": {
+          "type": "object",
+          "description": "Post-extraction filters applied to the extracted text.",
+          "properties": {
+            "exclude": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Regex patterns — matching results are removed."
+            },
+            "include": {
+              "type": ["array", "null"],
+              "items": { "type": "string" },
+              "description": "Regex patterns — only matching results are kept. Null means keep all."
+            },
+            "trim": {
+              "type": "boolean",
+              "default": true,
+              "description": "Trim leading/trailing whitespace."
+            },
+            "deduplicate": {
+              "type": "boolean",
+              "default": true,
+              "description": "Remove duplicate entries."
+            }
+          }
+        }
+      }
+    }
+  }
+}

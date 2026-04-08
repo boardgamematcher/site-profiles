@@ -1,0 +1,84 @@
+{
+  "$schema": "./schema.json",
+  "version": "1.0.0",
+  "profiles": [
+    {
+      "name": "Philibert Flash Sales",
+      "domain": "philibertnet.com",
+      "url_pattern": "philibertnet\\.com/.*/flash-sales",
+      "selector": ".s_title_block a",
+      "threshold": 0.8,
+      "filters": {
+        "exclude": [],
+        "include": null,
+        "trim": true,
+        "deduplicate": true
+      }
+    },
+    {
+      "name": "Philibert Promotions",
+      "domain": "philibertnet.com",
+      "url_pattern": "philibertnet\\.com/.*/promotions",
+      "selector": ".s_title_block a",
+      "threshold": 0.8,
+      "filters": {
+        "exclude": [],
+        "include": null,
+        "trim": true,
+        "deduplicate": true
+      }
+    },
+    {
+      "name": "Philibert Homepage",
+      "domain": "philibertnet.com",
+      "url_pattern": "philibertnet\\.com/(?:fr|en|de|es|it)/?$",
+      "selector": ".s_title_block a",
+      "threshold": 0.8,
+      "filters": {
+        "exclude": [],
+        "include": null,
+        "trim": true,
+        "deduplicate": true
+      }
+    },
+    {
+      "name": "Amazon Search Results",
+      "domain": "amazon.com",
+      "url_pattern": "amazon\\.(com|fr|de|co\\.uk|es|it)/s\\?",
+      "selector": "div[data-component-type=\"s-search-result\"] h2 span",
+      "threshold": 0.8,
+      "filters": {
+        "exclude": ["^Sponsored", "^Sponsorisé", "^Advertisement", "^Publicité"],
+        "include": null,
+        "trim": true,
+        "deduplicate": true
+      }
+    },
+    {
+      "name": "Amazon Best Sellers / Category",
+      "domain": "amazon.com",
+      "url_pattern": "amazon\\.(com|fr|de|co\\.uk|es|it)/(gp/|Best-Sellers|b[/\\?])",
+      "selector": "h2 span, .p13n-sc-truncate-desktop-type2",
+      "threshold": 0.8,
+      "filters": {
+        "exclude": ["^Sponsored", "^Sponsorisé"],
+        "include": null,
+        "trim": true,
+        "deduplicate": true
+      }
+    },
+    {
+      "name": "Knapix",
+      "domain": "knapix.com",
+      "url_pattern": "knapix\\.com/",
+      "selector": "a[href^=\"/r/\"] h3",
+      "threshold": 0.8,
+      "filters": {
+        "exclude": [],
+        "include": null,
+        "trim": true,
+        "deduplicate": true
+      }
+    }
+  ]
+}
