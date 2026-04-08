@@ -279,6 +279,55 @@
       "selector": ".woocommerce-loop-product__title",
       "threshold": 0.8,
       "url_pattern": "lepion\\.com"
+    },
+    {
+      "card_selector": ".product-card",
+      "domain": "gamersdream.shop",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img.product-card__image",
+      "name": "Gamers Dream",
+      "price_selector": ".dualPrice",
+      "sale_price_selector": ".product-card__regular-price",
+      "selector": ".product-card__name",
+      "threshold": 0.8,
+      "url_pattern": "gamersdream\\.shop"
+    },
+    {
+      "card_selector": ".card",
+      "domain": "ludisphere.fr",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Ludisphere",
+      "price_selector": ".price-item--regular",
+      "selector": ".card__heading a",
+      "threshold": 0.8,
+      "url_pattern": "ludisphere\\.fr"
+    },
+    {
+      "card_selector": ".product-miniature",
+      "domain": "ludifolie.com",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Ludifolie",
+      "price_selector": ".price",
+      "selector": ".product-title",
+      "threshold": 0.8,
+      "url_pattern": "ludifolie\\.com"
     }
   ],
   "version": "1.1.0"
