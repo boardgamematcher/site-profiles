@@ -89,7 +89,7 @@
     {
       "name": "Knapix",
       "domain": "knapix.com",
-      "url_pattern": "knapix\\.com/",
+      "url_pattern": "knapix\\.com",
       "card_selector": "a[href^=\"/r/\"]",
       "selector": "h3",
       "image_selector": "img",
