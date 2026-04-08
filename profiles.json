@@ -53,6 +53,23 @@
       "url_pattern": "philibertnet\\.com/(?:fr|en|de|es|it)/?$"
     },
     {
+      "card_selector": ".s_title_block",
+      "domain": "philibertnet.com",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Philibert Search / Category",
+      "price_selector": ".price",
+      "sale_price_selector": ".old-price",
+      "selector": "a",
+      "threshold": 0.8,
+      "url_pattern": "philibertnet\\.com/"
+    },
+    {
       "card_selector": "div[data-component-type=\"s-search-result\"]",
       "domain": "amazon.com",
       "filters": {
@@ -73,6 +90,46 @@
       "selector": "h2 span",
       "threshold": 0.8,
       "url_pattern": "amazon\\.(com|fr|de|co\\.uk|es|it)/s\\?"
+    },
+    {
+      "card_selector": "div[data-component-type=\"s-search-result\"]",
+      "domain": "amazon.fr",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [
+          "^Sponsoris\u00e9",
+          "^Publicit\u00e9"
+        ],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img.s-image",
+      "name": "Amazon France Search",
+      "price_selector": ".a-price .a-offscreen",
+      "sale_price_selector": ".a-price[data-a-strike] .a-offscreen",
+      "selector": "h2 span",
+      "threshold": 0.8,
+      "url_pattern": "amazon\\.fr/s\\?"
+    },
+    {
+      "card_selector": "div[data-component-type=\"s-search-result\"]",
+      "domain": "amazon.de",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [
+          "^Gesponsert",
+          "^Anzeige"
+        ],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img.s-image",
+      "name": "Amazon Germany Search",
+      "price_selector": ".a-price .a-offscreen",
+      "sale_price_selector": ".a-price[data-a-strike] .a-offscreen",
+      "selector": "h2 span",
+      "threshold": 0.8,
+      "url_pattern": "amazon\\.de/s\\?"
     },
     {
       "card_selector": ".p13n-sc-uncoverable-faceout, .a-section",
