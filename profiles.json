@@ -198,6 +198,70 @@
       "selector": ".thumbnail-title",
       "threshold": 0.8,
       "url_pattern": "fnac\\.com"
+    },
+    {
+      "card_selector": ".product_box",
+      "domain": "espritjeu.com",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Esprit Jeu",
+      "price_selector": ".bp_prix_add_to_cart",
+      "selector": ".bp_designation",
+      "threshold": 0.8,
+      "url_pattern": "espritjeu\\.com"
+    },
+    {
+      "card_selector": ".product-miniature",
+      "domain": "ludum.fr",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Ludum",
+      "price_selector": ".price",
+      "selector": "h2",
+      "threshold": 0.8,
+      "url_pattern": "ludum\\.fr"
+    },
+    {
+      "card_selector": ".nq-c-ProductListItem",
+      "domain": "le-passe-temps.com",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Le Passe-Temps",
+      "price_selector": ".nq-c-ProductListItem-actions",
+      "selector": ".nq-c-ProductListItem-main-title",
+      "threshold": 0.8,
+      "url_pattern": "le-passe-temps\\.com"
+    },
+    {
+      "card_selector": "article.jeu",
+      "domain": "okkazeo.com",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Okkazeo",
+      "price_selector": ".product-card-price",
+      "selector": ".titre a",
+      "threshold": 0.8,
+      "url_pattern": "okkazeo\\.com"
     }
   ],
   "version": "1.1.0"
