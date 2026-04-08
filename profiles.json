@@ -397,6 +397,118 @@
       "selector": ".store-pass-product-title a",
       "threshold": 0.8,
       "url_pattern": "gamenerdz\\.com"
+    },
+    {
+      "card_selector": ".productbox-inner",
+      "domain": "brettspielversand.de",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "brettspielversand.de",
+      "price_selector": ".productbox-price",
+      "selector": ".productbox-title a",
+      "threshold": 0.8,
+      "url_pattern": "brettspielversand\\.de"
+    },
+    {
+      "card_selector": "li.first, li",
+      "domain": "milan-spiele.de",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Milan Spiele",
+      "price_selector": ".price",
+      "selector": "a p",
+      "threshold": 0.8,
+      "url_pattern": "milan-spiele\\.de"
+    },
+    {
+      "card_selector": ".product-box",
+      "domain": "fantasywelt.de",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Fantasywelt",
+      "price_selector": ".product-price",
+      "selector": ".product-name, .product-title",
+      "threshold": 0.8,
+      "url_pattern": "fantasywelt\\.de"
+    },
+    {
+      "card_selector": ".product-box, .product-item",
+      "domain": "spiele-offensive.de",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Spiele-Offensive",
+      "price_selector": ".product-price, .price",
+      "selector": ".product-title, .product-name, h3 a",
+      "threshold": 0.8,
+      "url_pattern": "spiele-offensive\\.de"
+    },
+    {
+      "card_selector": "article, .product-item",
+      "domain": "thalia.de",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Thalia",
+      "price_selector": ".price, .product-price",
+      "selector": ".product-title, h3, .product-name",
+      "threshold": 0.8,
+      "url_pattern": "thalia\\.de"
+    },
+    {
+      "card_selector": ".card, .product-card",
+      "domain": "kutami.de",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Kutami",
+      "price_selector": ".price-item--regular, .price",
+      "selector": ".card__heading a, .product-card__title",
+      "threshold": 0.8,
+      "url_pattern": "kutami\\.de"
+    },
+    {
+      "card_selector": ".product-miniature",
+      "domain": "spieletaxi.de",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "img",
+      "name": "Spieletaxi",
+      "price_selector": ".price",
+      "selector": ".product-title, h3 a",
+      "threshold": 0.8,
+      "url_pattern": "spieletaxi\\.de"
     }
   ],
   "version": "1.2.0"
