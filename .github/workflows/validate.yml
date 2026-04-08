@@ -1,0 +1,57 @@
+name: Validate profiles
+
+on:
+  pull_request:
+    paths:
+      - profiles.json
+      - schema.json
+  push:
+    branches: [main]
+    paths:
+      - profiles.json
+      - schema.json
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON syntax
+        run: python3 -m json.tool profiles.json > /dev/null
+
+      - name: Validate against schema
+        uses: cardinalby/schema-validator-action@v3
+        with:
+          file: profiles.json
+          schema: schema.json
+
+      - name: Check for duplicate profiles
+        run: |
+          python3 -c "
+          import json, sys
+          data = json.load(open('profiles.json'))
+          names = [p['name'] for p in data['profiles']]
+          dupes = [n for n in names if names.count(n) > 1]
+          if dupes:
+              print(f'Duplicate profile names: {set(dupes)}')
+              sys.exit(1)
+          print(f'All {len(names)} profiles have unique names')
+          "
+
+      - name: Check all required fields present
+        run: |
+          python3 -c "
+          import json, sys
+          data = json.load(open('profiles.json'))
+          errors = []
+          for i, p in enumerate(data['profiles']):
+              for field in ['name', 'domain', 'url_pattern', 'selector']:
+                  if not p.get(field):
+                      errors.append(f'Profile {i}: missing {field}')
+          if errors:
+              for e in errors:
+                  print(e)
+              sys.exit(1)
+          print(f'All {len(data[\"profiles\"])} profiles valid')
+          "
