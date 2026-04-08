@@ -1,7 +1,7 @@
 # BGM Site Profiles
 
 Community-maintained board game site extraction profiles used by:
-- **[BGM Toolbox](https://github.com/boardgamematcher/boardgame-clipper)** — browser extension
+- **[BGM Toolbox](https://github.com/boardgamematcher/bgm-toolbox)** — browser extension
 - **[BoardGameMatcher.com](https://boardgamematcher.com)** — game extractor page
 
 ## How it works
