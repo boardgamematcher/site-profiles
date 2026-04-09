@@ -43,6 +43,23 @@
       "url_pattern": "philibertnet\\.com/(?:fr|en|de|es|it)/?$"
     },
     {
+      "card_selector": "#center_column",
+      "domain": "philibertnet.com",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "image_selector": "#bigpic",
+      "name": "Philibert Product Page",
+      "price_selector": "#our_price_display",
+      "sale_price_selector": "#old_price_display",
+      "selector": "h1#product_name",
+      "threshold": 0.9,
+      "url_pattern": "philibertnet\\.com/(?:fr|en|de|es|it)/[^/]+/\\d+-"
+    },
+    {
       "domain": "philibertnet.com",
       "filters": {
         "deduplicate": true,
