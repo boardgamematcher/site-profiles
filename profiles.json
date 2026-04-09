@@ -2,7 +2,6 @@
   "$schema": "./schema.json",
   "profiles": [
     {
-      "card_selector": "a.mam",
       "domain": "philibertnet.com",
       "filters": {
         "deduplicate": true,
@@ -13,7 +12,7 @@
       "image_selector": "img",
       "name": "Philibert Flash Sales",
       "price_selector": ".prix-jeu",
-      "selector": "h3",
+      "selector": ".s_title_block a",
       "threshold": 0.8,
       "url_pattern": "philibertnet\\.com/.*/flash-sales"
     },
@@ -63,9 +62,9 @@
         "deduplicate": true,
         "exclude": [
           "^Sponsored",
-          "^Sponsoris\u00e9",
+          "^Sponsorisé",
           "^Advertisement",
-          "^Publicit\u00e9"
+          "^Publicité"
         ],
         "include": null,
         "trim": true
@@ -84,8 +83,8 @@
       "filters": {
         "deduplicate": true,
         "exclude": [
-          "^Sponsoris\u00e9",
-          "^Publicit\u00e9"
+          "^Sponsorisé",
+          "^Publicité"
         ],
         "include": null,
         "trim": true
@@ -125,7 +124,7 @@
         "deduplicate": true,
         "exclude": [
           "^Sponsored",
-          "^Sponsoris\u00e9"
+          "^Sponsorisé"
         ],
         "include": null,
         "trim": true
