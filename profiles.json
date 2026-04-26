@@ -2,6 +2,30 @@
   "$schema": "./schema.json",
   "profiles": [
     {
+      "data_source": "next_data",
+      "domain": "veepee.fr",
+      "filters": {
+        "deduplicate": true,
+        "exclude": []
+      },
+      "name": "Veepee Catalog",
+      "next_data": {
+        "fields": {
+          "currency": "pricing.currency.symbol",
+          "image": "medias[0].url",
+          "name": "name",
+          "price": "pricing.price.value",
+          "sale_price": "pricing.retailPrice.value"
+        },
+        "items_path": "props.initialState.CatalogItems.result.items",
+        "name_cleanup": {
+          "strip_suffix_pattern": "(\\s*[-\u2013]\\s*(?:\\d+\\s*(?:pi[e\u00e8]ces?|pcs?|pezzi|piezas?|Teile|stuks|pieces?)|d[e\u00e8]s?\\s+\\d+\\s*ans?|[\u00e0a]\\s*partir\\s+de\\s+\\d+\\s*ans?|from\\s+\\d+\\s+years?|ab\\s+\\d+\\s+Jahren?|desde\\s+\\d+\\s+a[\u00f1n]os?|da\\s+\\d+\\s+anni|vanaf\\s+\\d+\\s+jaar))+\\s*$"
+        }
+      },
+      "threshold": 0.8,
+      "url_pattern": "^https?://(?:www\\.veepee\\.(?:fr|de|es|it|at|lu|nl)|(?:fr|nl)\\.veepee\\.be|(?:es|it)\\.privalia\\.com)/[a-z]+/catalog/"
+    },
+    {
       "domain": "philibertnet.com",
       "filters": {
         "deduplicate": true,
@@ -79,9 +103,9 @@
         "deduplicate": true,
         "exclude": [
           "^Sponsored",
-          "^Sponsorisé",
+          "^Sponsoris\u00e9",
           "^Advertisement",
-          "^Publicité"
+          "^Publicit\u00e9"
         ],
         "include": null,
         "trim": true
@@ -100,8 +124,8 @@
       "filters": {
         "deduplicate": true,
         "exclude": [
-          "^Sponsorisé",
-          "^Publicité"
+          "^Sponsoris\u00e9",
+          "^Publicit\u00e9"
         ],
         "include": null,
         "trim": true
@@ -141,7 +165,7 @@
         "deduplicate": true,
         "exclude": [
           "^Sponsored",
-          "^Sponsorisé"
+          "^Sponsoris\u00e9"
         ],
         "include": null,
         "trim": true
@@ -527,5 +551,5 @@
       "url_pattern": "spieletaxi\\.de"
     }
   ],
-  "version": "1.2.0"
+  "version": "1.3.0"
 }

@@ -1,7 +1,44 @@
 {
   "$defs": {
     "profile": {
+      "allOf": [
+        {
+          "else": {
+            "required": [
+              "name",
+              "domain",
+              "url_pattern",
+              "selector"
+            ]
+          },
+          "if": {
+            "properties": {
+              "data_source": {
+                "const": "next_data"
+              }
+            },
+            "required": [
+              "data_source"
+            ]
+          },
+          "then": {
+            "required": [
+              "name",
+              "domain",
+              "url_pattern",
+              "next_data"
+            ]
+          }
+        }
+      ],
       "properties": {
+        "data_source": {
+          "description": "Optional alternate extraction strategy. When set, 'selector' is not required and the profile is consumed by the toolbox extension only (the server cannot scrape it). 'next_data' reads __NEXT_DATA__ from a Next.js page and walks a JSON path defined in the 'next_data' object.",
+          "enum": [
+            "next_data"
+          ],
+          "type": "string"
+        },
         "domain": {
           "description": "Primary domain without www (e.g., 'amazon.com'). Used by the browser extension for quick matching.",
           "type": "string"
@@ -43,8 +80,47 @@
           "description": "Human-readable name for this profile (e.g., 'Amazon Search Results')",
           "type": "string"
         },
+        "next_data": {
+          "description": "Configuration for data_source='next_data'. Required when data_source='next_data'.",
+          "properties": {
+            "fields": {
+              "description": "Map of output field name to a dot path inside each item. 'name' is required; 'price', 'sale_price', 'currency', 'image' are optional. Array indexing is supported as 'medias[0].url'.",
+              "type": "object"
+            },
+            "items_path": {
+              "description": "Dot path inside __NEXT_DATA__ pointing to the array of items (e.g. 'props.initialState.CatalogItems.result.items'). Can also be an array of paths for multi-source merging.",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              ]
+            },
+            "name_cleanup": {
+              "description": "Optional regex strips applied to the extracted name before filtering/dedup.",
+              "properties": {
+                "strip_prefix_pattern": {
+                  "type": "string"
+                },
+                "strip_suffix_pattern": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "items_path"
+          ],
+          "type": "object"
+        },
         "selector": {
-          "description": "CSS selector targeting game/product name elements on the page.",
+          "description": "CSS selector targeting game/product name elements on the page. Required for DOM-based scraping; not required when 'data_source' is set.",
           "type": "string"
         },
         "threshold": {
@@ -59,12 +135,6 @@
           "type": "string"
         }
       },
-      "required": [
-        "name",
-        "domain",
-        "url_pattern",
-        "selector"
-      ],
       "type": "object"
     }
   },
