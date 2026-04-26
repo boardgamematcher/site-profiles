@@ -46,7 +46,20 @@ jobs:
           data = json.load(open('profiles.json'))
           errors = []
           for i, p in enumerate(data['profiles']):
-              for field in ['name', 'domain', 'url_pattern', 'selector']:
+              base = ['name', 'domain', 'url_pattern']
+              # data_source profiles (e.g. next_data) replace 'selector'
+              # with a strategy-specific config block; CSS-selector profiles
+              # still need 'selector'.
+              if p.get('data_source') == 'next_data':
+                  required = base + ['next_data']
+                  if not (p.get('next_data') or {}).get('items_path'):
+                      errors.append(f'Profile {i}: missing next_data.items_path')
+              elif p.get('data_source'):
+                  errors.append(f'Profile {i}: unknown data_source {p[\"data_source\"]!r}')
+                  continue
+              else:
+                  required = base + ['selector']
+              for field in required:
                   if not p.get(field):
                       errors.append(f'Profile {i}: missing {field}')
           if errors:
