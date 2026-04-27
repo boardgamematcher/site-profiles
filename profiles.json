@@ -19,7 +19,8 @@
         },
         "items_path": "props.initialState.CatalogItems.result.items",
         "name_cleanup": {
-          "strip_suffix_pattern": "(\\s*[-\u2013]\\s*(?:\\d+\\s*(?:pi[e\u00e8]ces?|pcs?|pezzi|piezas?|Teile|stuks|pieces?)|d[e\u00e8]s?\\s+\\d+\\s*ans?|[\u00e0a]\\s*partir\\s+de\\s+\\d+\\s*ans?|from\\s+\\d+\\s+years?|ab\\s+\\d+\\s+Jahren?|desde\\s+\\d+\\s+a[\u00f1n]os?|da\\s+\\d+\\s+anni|vanaf\\s+\\d+\\s+jaar))+\\s*$"
+          "strip_prefix_pattern": "^.+?\\s+-\\s+(?:Jeu(?:\\s+de\\s+(?:soci[e\u00e9]t[e\u00e9]|strat[e\u00e9]gie|carte(?:s)?|r[o\u00f4]le(?:s)?))?\\s+)?",
+          "strip_suffix_pattern": "(\\s*[-\u2013]\\s*(?:\\d+\\s*(?:pi[e\u00e8]ces?|pcs?|pezzi|piezas?|Teile|stuks|pieces?)|d[e\u00e8]s?\\s+\\d+\\s*ans?|[\u00e0a]\\s*partir\\s+de\\s+\\d+\\s*ans?|from\\s+\\d+\\s+years?|ab\\s+\\d+\\s+Jahren?|desde\\s+\\d+\\s+a[\u00f1n]os?|da\\s+\\d+\\s+anni|vanaf\\s+\\d+\\s+jaar|\\d+(?:\\s*[\u00e0a\u2013-]\\s*\\d+)?\\s*joueurs?|jusqu'[\u00e0a]\\s*\\d+\\s*joueurs?))+\\s*$"
         }
       },
       "threshold": 0.8,
