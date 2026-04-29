@@ -80,6 +80,18 @@
           "description": "Human-readable name for this profile (e.g., 'Amazon Search Results')",
           "type": "string"
         },
+        "name_cleanup": {
+          "description": "Optional regex strips applied to the extracted name. Works for both DOM-based and next_data profiles.",
+          "properties": {
+            "strip_prefix_pattern": {
+              "type": "string"
+            },
+            "strip_suffix_pattern": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
         "next_data": {
           "description": "Configuration for data_source='next_data'. Required when data_source='next_data'.",
           "properties": {
