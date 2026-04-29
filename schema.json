@@ -131,6 +131,18 @@
           ],
           "type": "object"
         },
+        "price_cleanup": {
+          "description": "Optional regex strips applied to the extracted price string.",
+          "properties": {
+            "strip_prefix_pattern": {
+              "type": "string"
+            },
+            "strip_suffix_pattern": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
         "selector": {
           "description": "CSS selector targeting game/product name elements on the page. Required for DOM-based scraping; not required when 'data_source' is set.",
           "type": "string"
