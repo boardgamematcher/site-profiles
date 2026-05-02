@@ -143,6 +143,10 @@
           },
           "type": "object"
         },
+        "primary_selector": {
+          "description": "Optional CSS selector for the main/featured product on a product-detail page. Candidates matched by this selector are marked is_primary=true and listed first. The regular 'selector' is then used for related/secondary items.",
+          "type": "string"
+        },
         "selector": {
           "description": "CSS selector targeting game/product name elements on the page. Required for DOM-based scraping; not required when 'data_source' is set.",
           "type": "string"

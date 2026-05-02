@@ -484,10 +484,11 @@
     },
     {
       "domain": "spiele-offensive.de",
-      "image_selector": "#bildwechsel img",
+      "image_selector": ".ala_bild2 img",
       "name": "Spiele-Offensive Product Page",
-      "price_selector": ".preis",
-      "selector": "h1#a1",
+      "price_selector": ".jn + div",
+      "primary_selector": "h1#a1",
+      "selector": "a.alamain font",
       "threshold": 0.9,
       "url_pattern": "spiele-offensive\\.de/Spiel/"
     },
