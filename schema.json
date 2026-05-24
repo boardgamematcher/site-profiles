@@ -143,6 +143,10 @@
           },
           "type": "object"
         },
+        "bgg_id_selector": {
+          "description": "Optional CSS selector targeting an anchor whose href contains a BoardGameGeek URL (e.g. boardgamegeek.com/boardgame/12345). When present, the extension extracts the numeric BGG ID from that href and passes it to the preview API for unambiguous catalog matching — useful when multiple games share the same title.",
+          "type": "string"
+        },
         "primary_selector": {
           "description": "Optional CSS selector for the main/featured product on a product-detail page. Candidates matched by this selector are marked is_primary=true and listed first. The regular 'selector' is then used for related/secondary items.",
           "type": "string"

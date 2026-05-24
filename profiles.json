@@ -349,6 +349,7 @@
       "url_pattern": "ludifolie\\.com"
     },
     {
+      "bgg_id_selector": "a[href*='boardgamegeek.com/boardgame/']",
       "card_selector": "#main",
       "domain": "ludiprix.fr",
       "filters": {
