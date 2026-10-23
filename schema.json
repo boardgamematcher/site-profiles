@@ -32,6 +32,10 @@
         }
       ],
       "properties": {
+        "catalog_badges": {
+          "description": "When true, the extension injects a BGM info badge on the image of each card (card_selector + image_selector, title from selector) whose title matches a game known to BoardGameMatcher. Opt-in; listing pages only.",
+          "type": "boolean"
+        },
         "data_source": {
           "description": "Optional alternate extraction strategy. When set, 'selector' is not required and the profile is consumed by the toolbox extension only (the server cannot scrape it). 'next_data' reads __NEXT_DATA__ from a Next.js page and walks a JSON path defined in the 'next_data' object.",
           "enum": [
