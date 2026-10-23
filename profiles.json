@@ -626,11 +626,13 @@
     },
     {
       "card_selector": ".MuiPaper-root:has(a[href^=\"/fr/0\"])",
+      "catalog_badges": true,
       "domain": "parkage.com",
       "filters": {
         "deduplicate": true,
         "trim": true
       },
+      "image_selector": "a[href^=\"/fr/0\"] > img",
       "name": "Parkage Search",
       "price_selector": "p.MuiTypography-body1",
       "sale_price_selector": ".MuiBadge-root > .MuiTypography-h3",
