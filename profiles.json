@@ -27,7 +27,8 @@
       "url_pattern": "^https?://(?:www\\.veepee\\.(?:fr|de|es|it|at|lu|nl)|(?:fr|nl)\\.veepee\\.be|(?:es|it)\\.privalia\\.com)/[a-z]+/catalog/"
     },
     {
-      "card_selector": ".wrapper_product",
+      "card_selector": ".product-card",
+      "catalog_badges": true,
       "domain": "philibertnet.com",
       "filters": {
         "deduplicate": true,
@@ -35,16 +36,17 @@
         "include": null,
         "trim": true
       },
-      "image_selector": ".wrapper_product_1 img",
+      "image_selector": ".product-card__thumb",
       "name": "Philibert Flash Sales",
-      "price_selector": ".price_container .price",
-      "sale_price_selector": ".old-price.product-price",
-      "selector": ".s_title_block a",
+      "price_selector": ".product-card__price",
+      "sale_price_selector": ".product-card__price--old",
+      "selector": ".product-card__title",
       "threshold": 0.8,
       "url_pattern": "philibertnet\\.com/.*/flash-sales"
     },
     {
-      "card_selector": ".wrapper_product",
+      "card_selector": ".product-card",
+      "catalog_badges": true,
       "domain": "philibertnet.com",
       "filters": {
         "deduplicate": true,
@@ -52,16 +54,17 @@
         "include": null,
         "trim": true
       },
-      "image_selector": ".wrapper_product_1 img",
+      "image_selector": ".product-card__thumb",
       "name": "Philibert Promotions",
-      "price_selector": ".price_container .price",
-      "sale_price_selector": ".old-price.product-price",
-      "selector": ".s_title_block a",
+      "price_selector": ".product-card__price",
+      "sale_price_selector": ".product-card__price--old",
+      "selector": ".product-card__title",
       "threshold": 0.8,
       "url_pattern": "philibertnet\\.com/.*/promotions"
     },
     {
-      "card_selector": ".wrapper_product",
+      "card_selector": ".product-card",
+      "catalog_badges": true,
       "domain": "philibertnet.com",
       "filters": {
         "deduplicate": true,
@@ -69,11 +72,11 @@
         "include": null,
         "trim": true
       },
-      "image_selector": ".wrapper_product_1 img",
+      "image_selector": ".product-card__thumb",
       "name": "Philibert Homepage",
-      "price_selector": ".price_container .price",
-      "sale_price_selector": ".old-price.product-price",
-      "selector": ".s_title_block a",
+      "price_selector": ".product-card__price",
+      "sale_price_selector": ".product-card__price--old",
+      "selector": ".product-card__title",
       "threshold": 0.8,
       "url_pattern": "philibertnet\\.com/(?:fr|en|de|es|it)/?$"
     },
@@ -90,12 +93,13 @@
       "name": "Philibert Product Page",
       "price_selector": "#our_price_display",
       "sale_price_selector": "#old_price_display",
-      "selector": "h1#product_name",
+      "selector": "h1.product-title",
       "threshold": 0.9,
       "url_pattern": "philibertnet\\.com/(?:fr|en|de|es|it)/[^/]+/\\d+-"
     },
     {
-      "card_selector": ".wrapper_product",
+      "card_selector": ".product-card",
+      "catalog_badges": true,
       "domain": "philibertnet.com",
       "filters": {
         "deduplicate": true,
@@ -103,11 +107,11 @@
         "include": null,
         "trim": true
       },
-      "image_selector": ".wrapper_product_1 img",
+      "image_selector": ".product-card__thumb",
       "name": "Philibert Search / Category",
-      "price_selector": ".price_container .price",
-      "sale_price_selector": ".old-price.product-price",
-      "selector": ".s_title_block a",
+      "price_selector": ".product-card__price",
+      "sale_price_selector": ".product-card__price--old",
+      "selector": ".product-card__title",
       "threshold": 0.8,
       "url_pattern": "philibertnet\\.com/"
     },
