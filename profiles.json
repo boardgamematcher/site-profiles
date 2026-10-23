@@ -629,18 +629,18 @@
       "url_pattern": "coolshop\\.(dk|de|se|no|fi|nl|pl|is|co|com)/"
     },
     {
-      "card_selector": ".MuiPaper-root:has(a[href^=\"/fr/0\"])",
+      "card_selector": ".MuiPaper-root:has(:is(a[href^=\"/fr/0\"],a[href^=\"/fr/1\"],a[href^=\"/fr/2\"],a[href^=\"/fr/3\"],a[href^=\"/fr/4\"],a[href^=\"/fr/5\"],a[href^=\"/fr/6\"],a[href^=\"/fr/7\"],a[href^=\"/fr/8\"],a[href^=\"/fr/9\"]))",
       "catalog_badges": true,
       "domain": "parkage.com",
       "filters": {
         "deduplicate": true,
         "trim": true
       },
-      "image_selector": "a[href^=\"/fr/0\"] > img",
+      "image_selector": ":is(a[href^=\"/fr/0\"],a[href^=\"/fr/1\"],a[href^=\"/fr/2\"],a[href^=\"/fr/3\"],a[href^=\"/fr/4\"],a[href^=\"/fr/5\"],a[href^=\"/fr/6\"],a[href^=\"/fr/7\"],a[href^=\"/fr/8\"],a[href^=\"/fr/9\"]) > img",
       "name": "Parkage Search",
       "price_selector": "p.MuiTypography-body1",
       "sale_price_selector": ".MuiBadge-root > .MuiTypography-h3",
-      "selector": "a[href^=\"/fr/0\"] > span.MuiTypography-body1",
+      "selector": ":is(a[href^=\"/fr/0\"],a[href^=\"/fr/1\"],a[href^=\"/fr/2\"],a[href^=\"/fr/3\"],a[href^=\"/fr/4\"],a[href^=\"/fr/5\"],a[href^=\"/fr/6\"],a[href^=\"/fr/7\"],a[href^=\"/fr/8\"],a[href^=\"/fr/9\"]) > span.MuiTypography-body1",
       "threshold": 0.8,
       "url_pattern": "parkage\\.com/fr/recherche"
     }
