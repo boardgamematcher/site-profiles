@@ -175,6 +175,7 @@
     },
     {
       "card_selector": "a[href^=\"/r/\"]",
+      "catalog_badges": true,
       "domain": "knapix.com",
       "filters": {
         "deduplicate": true,
@@ -224,6 +225,7 @@
     },
     {
       "card_selector": ".product_box",
+      "catalog_badges": true,
       "domain": "espritjeu.com",
       "filters": {
         "deduplicate": true,
@@ -256,6 +258,7 @@
     },
     {
       "card_selector": ".nq-c-ProductListItem",
+      "catalog_badges": true,
       "domain": "le-passe-temps.com",
       "filters": {
         "deduplicate": true,
@@ -288,6 +291,7 @@
     },
     {
       "card_selector": "li.product",
+      "catalog_badges": true,
       "domain": "lepion.com",
       "filters": {
         "deduplicate": true,
@@ -305,6 +309,7 @@
     },
     {
       "card_selector": ".product-card",
+      "catalog_badges": true,
       "domain": "gamersdream.shop",
       "filters": {
         "deduplicate": true,
@@ -322,6 +327,7 @@
     },
     {
       "card_selector": ".card",
+      "catalog_badges": true,
       "domain": "ludisphere.fr",
       "filters": {
         "deduplicate": true,
@@ -418,6 +424,7 @@
     },
     {
       "card_selector": ".card",
+      "catalog_badges": true,
       "domain": "boardgamebliss.com",
       "filters": {
         "deduplicate": true,
@@ -434,6 +441,7 @@
     },
     {
       "card_selector": ".product-card",
+      "catalog_badges": true,
       "domain": "board-game.co.uk",
       "filters": {
         "deduplicate": true,
