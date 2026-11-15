@@ -391,6 +391,20 @@
       "url_pattern": "ludiprix\\.fr/item/search"
     },
     {
+      "card_selector": ".searchinfocontainer",
+      "domain": "ludiprix.fr",
+      "filters": {
+        "deduplicate": true,
+        "exclude": [],
+        "include": null,
+        "trim": true
+      },
+      "name": "Ludiprix Price Drops",
+      "selector": ".name a",
+      "threshold": 0.8,
+      "url_pattern": "ludiprix\\.fr/item/pricedrops"
+    },
+    {
       "card_selector": ".product-search-row",
       "domain": "coolstuffinc.com",
       "filters": {
