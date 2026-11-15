@@ -84,6 +84,10 @@
           "description": "Human-readable name for this profile (e.g., 'Amazon Search Results')",
           "type": "string"
         },
+        "image_in_previous_sibling": {
+          "description": "When true, image_selector is looked up in the element right before the card (card_selector) instead of inside it. For shops that put the cover in a neighbouring cell (e.g. Ludiprix lists).",
+          "type": "boolean"
+        },
         "name_cleanup": {
           "description": "Optional regex strips applied to the extracted name. Works for both DOM-based and next_data profiles.",
           "properties": {
