@@ -377,6 +377,7 @@
     },
     {
       "card_selector": ".searchinfocontainer",
+      "catalog_badges": true,
       "domain": "ludiprix.fr",
       "filters": {
         "deduplicate": true,
@@ -384,6 +385,8 @@
         "include": null,
         "trim": true
       },
+      "image_in_previous_sibling": true,
+      "image_selector": "img",
       "name": "Ludiprix Search",
       "price_selector": ".price",
       "selector": ".name a",
@@ -392,6 +395,7 @@
     },
     {
       "card_selector": ".searchinfocontainer",
+      "catalog_badges": true,
       "domain": "ludiprix.fr",
       "filters": {
         "deduplicate": true,
@@ -399,6 +403,8 @@
         "include": null,
         "trim": true
       },
+      "image_in_previous_sibling": true,
+      "image_selector": "img",
       "name": "Ludiprix Price Drops",
       "selector": ".name a",
       "threshold": 0.8,
